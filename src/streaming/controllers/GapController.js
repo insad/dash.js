@@ -36,6 +36,7 @@ import EventBus from '../../core/EventBus';
 const GAP_HANDLER_INTERVAL = 100;
 const THRESHOLD_TO_STALLS = 10;
 const GAP_THRESHOLD = 0.1;
+const MINIMUM_SEEK_POSITION = 0.11;
 
 function GapController() {
     const context = this.context;
@@ -203,6 +204,9 @@ function GapController() {
             seekToPosition = parseFloat(currentTime + timeToStreamEnd).toFixed(5);
             jumpToStreamEnd = true;
         }
+
+        // Minimum seek position to avoid problems in Safari. Safari seems to ignore seek times below 0.1 for some reason.
+        seekToPosition = Math.max(MINIMUM_SEEK_POSITION, seekToPosition);
 
         if (seekToPosition > 0 && lastGapJumpPosition !== seekToPosition) {
             if (jumpToStreamEnd) {
