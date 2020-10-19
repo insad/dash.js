@@ -29,7 +29,8 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  */
 
-import 'core-js/stable';
+import 'core-js/stable/url';
+import 'core-js/stable/url-search-params';
 import { MediaPlayer } from './index_mediaplayerOnly';
 
 import MetricsReporting from './src/streaming/metrics/MetricsReporting';
