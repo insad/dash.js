@@ -31,6 +31,7 @@
 
 import 'core-js/stable/url';
 import 'core-js/stable/url-search-params';
+import 'core-js/stable/array-buffer';
 import { MediaPlayer } from './index_mediaplayerOnly';
 
 import MetricsReporting from './src/streaming/metrics/MetricsReporting';
