@@ -1,0 +1,8 @@
+title: Dash.js
+description: A reference client implementation for the playback of MPEG DASH via Javascript and compliant browsers.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-midnight
+
+gems:
+  - jekyll-mentions
